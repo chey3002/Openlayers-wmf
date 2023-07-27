@@ -169,13 +169,17 @@
   </div>
   <footer class="mt-10 pt-5 bg-gray-800 text-white">
     <div class="container mx-auto grid grid-cols-2 h-32 justify-center align-center">
-      <div class="h-full" ><p class="text-center">Estudiantes autores:</p>
-      <ul class="text-center ">
-        <li>Carlos Valladarez</li>
-        <li>Michelle Zhunaula</li>
-        <li>Estefanny Campoverde</li>
-      </ul></div>
-      <div><p class="text-center">Materia: Gráficos por Computador</p></div>
+      <div class="h-full">
+        <p class="text-center">Estudiantes autores:</p>
+        <ul class="text-center ">
+          <li>Carlos Valladarez</li>
+          <li>Michelle Zhunaula</li>
+          <li>Estefanny Campoverde</li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-center">Materia: Gráficos por Computador</p>
+      </div>
     </div>
   </footer>
   <script type="text/javascript">
@@ -323,7 +327,13 @@
           // Example:
           // var docArticle = doc.querySelector('article').innerHTML;
           var jsontable = tableToJson(doc.getElementsByTagName("table")[0]);
-          var jsonValue = jsontable[jsontable.length - 1]
+          var jsonFilter = jsontable.filter(function (el) {
+            return el.nombre != '' &&
+              el.id != ''
+          }
+          );
+          console.log(jsonFilter);
+          var jsonValue = jsonFilter[0]
           var nombre = jsonValue.nombre;
           var direccion = jsonValue.direccion;
           var antiguedad = jsonValue.antiguedad;
