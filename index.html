@@ -107,7 +107,6 @@
       clear: both;
       position: relative;
       height: 466px;
-      border: 1px solid black;
     }
 
     #wrapper {
@@ -168,6 +167,17 @@
     <div id="nodelist">
     </div>
   </div>
+  <footer class="mt-10 pt-5 bg-gray-800 text-white">
+    <div class="container mx-auto grid grid-cols-2 h-32 justify-center align-center">
+      <div class="h-full" ><p class="text-center">Estudiantes autores:</p>
+      <ul class="text-center ">
+        <li>Carlos Valladarez</li>
+        <li>Michelle Zhunaula</li>
+        <li>Estefanny Campoverde</li>
+      </ul></div>
+      <div><p class="text-center">Materia: Gráficos por Computador</p></div>
+    </div>
+  </footer>
   <script type="text/javascript">
     function tableToJson(table) {
       var data = [];
@@ -327,7 +337,7 @@
       <div style="font-style: italic; margin-bottom: 5px;"><b>Antigüedad:</b> ${antiguedad}</div>
       <div><b>Dirección:</b> ${direccion}</div>
   <div class=' grid justify-center align-center w-full'>
-    <img class='object-cover  h-min-64 h-max-64' src=${url}/ alt=${nombre}>
+    <img class='object-cover  h-64' src="${url}" alt=${nombre}>
     </div>
       <div class="mb-2">
     <div class="h-3 text-3xl text-left text-gray-600">“</div>
